@@ -27,62 +27,19 @@
 	</head>
 
 	<!--
-		AVAILABLE BODY CLASSES:
 
-		smoothscroll 			= create a browser smooth scroll
-		enable-animation		= enable WOW animations
-
-		bg-grey					= grey background
-		grain-grey				= grey grain background
-		grain-blue				= blue grain background
-		grain-green				= green grain background
-		grain-blue				= blue grain background
-		grain-orange			= orange grain background
-		grain-yellow			= yellow grain background
-
-		boxed 					= boxed layout
-		pattern1 ... patern11	= pattern background
-		menu-vertical-hide		= hidden, open on click
-
-		BACKGROUND IMAGE [together with .boxed class]
-		data-background="assets/images/_smarty/boxed_background/1.jpg"
 	-->
 	<body class="smoothscroll enable-animation">
 
 		<!-- SLIDE TOP -->
 
-
 		<!-- /SLIDE TOP -->
-
 
 		<!-- wrapper -->
 		<div id="wrapper">
 
 			<!--
-				AVAILABLE HEADER CLASSES
 
-				Default nav height: 96px
-				.header-md 		= 70px nav height
-				.header-sm 		= 60px nav height
-
-				.b-0 		= remove bottom border (only with transparent use)
-				.transparent	= transparent header
-				.translucent	= translucent header
-				.sticky			= sticky header
-				.static			= static header
-				.dark			= dark header
-				.bottom			= header on bottom
-
-				shadow-before-1 = shadow 1 header top
-				shadow-after-1 	= shadow 1 header bottom
-				shadow-before-2 = shadow 2 header top
-				shadow-after-2 	= shadow 2 header bottom
-				shadow-before-3 = shadow 3 header top
-				shadow-after-3 	= shadow 3 header bottom
-
-				.clearfix		= required for mobile menu, do not remove!
-
-				Example Usage:  class="clearfix sticky header-sm transparent b-0"
 			-->
 			<div id="header" class="navbar-toggleable-md sticky clearfix">
 
@@ -95,34 +52,19 @@
 							<i class="fa fa-bars"></i>
 						</button>
 
-						<!-- BUTTONS -->
-
-							<!-- SEARCH -->
-
-							<!-- /SEARCH -->
-
-
-						<!-- /BUTTONS -->
-
 						<!-- Logo -->
 						<a class="logo float-left scrollTo" href="#top">
 							<img src="assetsLau/R2.png" alt="" />
 						</a>
 
 						<!--
-							Top Nav
 
-							AVAILABLE CLASSES:
-							submenu-dark = dark sub menu
 						-->
 						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
 							<nav class="nav-main">
 
 								<!--
-									.nav-onepage
-									Required for onepage navigation links
 
-									Add .external for an external link!
 								-->
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
 									<li class=""><!-- HOME -->
@@ -156,15 +98,6 @@
 										</a>
 									</li>
 
-
-
-
-
-
-
-
-
-
 								</ul>
 
 							</nav>
@@ -175,32 +108,6 @@
 				<!-- /Top Nav -->
 
 			</div>
-
-
-			<!--
-				PAGE HEADER
-
-				CLASSES:
-					.page-header-xs	= 20px margins
-					.page-header-md	= 50px margins
-					.page-header-lg	= 80px margins
-					.page-header-xlg= 130px margins
-					.dark			= dark page header
-
-					.shadow-before-1 	= shadow 1 header top
-					.shadow-after-1 	= shadow 1 header bottom
-					.shadow-before-2 	= shadow 2 header top
-					.shadow-after-2 	= shadow 2 header bottom
-					.shadow-before-3 	= shadow 3 header top
-					.shadow-after-3 	= shadow 3 header bottom
-			-->
-			<!-- Services -->
-
-
-
-			<!-- /PAGE HEADER -->
-
-
 
 
 			<!-- -->
@@ -218,7 +125,7 @@
 
 								<fieldset>
 
-											<div class="col-md-8"
+											<div class="col-md-12"
 												<label for="form-control pointer">TYPE OF PROJECT</label>
 												<select id="formulaire_select" onchange="selectType()" class="form-control pointer" name="formulaire">
 													<option value="">--- Select ---</option>
@@ -262,7 +169,7 @@
 	                    </div>
 											<div>
 											<label class="radio">
-											<input type="radio" value="7565" name="radio_res"  onclick="CalculateQuoteRes(this)" onchange="CalculateQuoteRes(this)">
+											<input type="radio" value="7565" name="radio_res"  checked= "checked" onclick="CalculateQuoteRes(this)" onchange="CalculateQuoteRes(this)">
 											<i></i>Standard
 											</label>
 											<label class="radio">
@@ -348,7 +255,7 @@
 											</div>
 											<div>
 											<label class="radio">
-											<input type="radio" value="7565" name="radio_comm" onclick="CalculateQuoteComm(this)" onchange="CalculateQuoteComm(this)">
+											<input type="radio" value="7565" name="radio_comm" checked= "checked" onclick="CalculateQuoteComm(this)" onchange="CalculateQuoteComm(this)">
 											<i></i>Standard
 											</label>
 											<label class="radio">
@@ -362,7 +269,7 @@
 											</div>
 											<div class="row">
 											<div class="col-md-4" "container">
-											 <label for="cages">price per unit</label>
+											 <label for="cages">Price per unit</label>
 											 <input required type="number" value="" class="form-control" name="commercial_container" id="price_unit_comm">
 											</div>
 											<div class="col-md-4" "container">
@@ -435,7 +342,7 @@
 
 											<div>
 											<label class="radio">
-											<input type="radio" value="7565" name="radio_corp" onclick="CalculateQuoteCorp(this)" onchange="CalculateQuoteCorp(this)">
+											<input type="radio" value="7565" name="radio_corp" checked= "checked" onclick="CalculateQuoteCorp(this)" onchange="CalculateQuoteCorp(this)">
 											<i></i>Standard
 											</label>
 											<label class="radio">
@@ -534,7 +441,7 @@
 
 										 <div>
 										 <label class="radio">
-										 <input type="radio" value="7565" name="radio_hyb" onclick="CalculateQuoteHyb(this)" onchange="CalculateQuoteHyb(this)">
+										 <input type="radio" value="7565" name="radio_hyb" checked= "checked" onclick="CalculateQuoteHyb(this)" onchange="CalculateQuoteHyb(this)">
 										 <i></i>Standard
 										 </label>
 										 <label class="radio">
@@ -578,14 +485,7 @@
 										 </div>
 
 
-
-
-
-
 							<!-- custom file upload -->
-
-
-
 
 
 
@@ -594,14 +494,9 @@
 			</section>
 			<!-- / -->
 
-
-
-
 			<!-- FOOTER -->
 			<footer id="footer">
 				<div class="container">
-
-
 
 					<div class="row">
 
@@ -683,7 +578,5 @@
 		<script src="assets/js/formulaire.js"></script>
 		<script src="assets/js/quote.js"></script>
 
-
-		<!-- STYLESWITCHER - REMOVE -->
 
 </html>
