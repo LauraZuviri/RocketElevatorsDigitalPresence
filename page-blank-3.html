@@ -125,33 +125,33 @@
 									Add .external for an external link!
 								-->
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-									<li class="active"><!-- HOME -->
-										<a href="#home">
+									<li class=""><!-- HOME -->
+										<a href="index-onepage-construction.html#home">
 											HOME
 										</a>
 									</li>
 									<li><!-- SERVICES -->
-										<a href="#services">
+										<a href="index-onepage-construction.html#services">
 											SERVICES
 										</a>
 									</li>
 									<li><!-- PORTFOLIO -->
-										<a href="#portfolio">
+										<a href="index-onepage-construction.html#portfolio">
 											PORTFOLIO
 										</a>
 									</li>
 									<li><!-- NEWS -->
-										<a href="#news">
+										<a href="index-onepage-construction.html#news">
 											NEWS
 										</a>
 									</li>
 									<li><!-- CLIENTS -->
-										<a href="#clients">
+										<a href="index-onepage-construction.html#clients">
 											CLIENTS
 										</a>
 									</li>
 									<li><!-- CONTACT -->
-										<a href="#contact">
+										<a href="index-onepage-construction.html#contact">
 											CONTACT
 										</a>
 									</li>
@@ -236,16 +236,69 @@
 											<div class="row">
 											<div class="col-md-4" "container">
 												<label for="number_apartments">Number of appartaments</label>
-												<input required type="number" value="" class="form-control" name="app_res" id="app_res">
-											</div>
+												<input required type="number" value="0" class="form-control" name="app_res" id="app_res" min="0"
+												onclick="CalculateQuoteRes(this)"
+												onkeyup="CalculateQuoteRes(this)"
+												onchange="CalculateQuoteRes (this)"
+												oninput="CalculateQuoteRes (this)">
+
+											 </div>
 											<div class="col-md-4" "container">
 												<label for="number_floors">Number of floors</label>
-												<input required type="number" value="" class="form-control" name="floor_res" id="floor_res">
+												<input required type="number" value="" class="form-control" name="floor_res" id="floor_res"
+												onclick="CalculateQuoteRes(this)"
+												onkeyup="CalculateQuoteRes(this)"
+												onchange="CalculateQuoteRes (this)"
+												oninput="CalculateQuoteRes (this)">
 											</div>
 											<div class="col-md-4" "container">
 												<label for="number_basements">Number of basements</label>
-												<input required type="number" value="" class="form-control" name="basement_res" id="basement_res">
+												<input required type="number" value="" class="form-control" name="basement_res" id="basement_res"
+												onclick="CalculateQuoteRes(this)"
+												onkeyup="CalculateQuoteRes(this)"
+												onchange="CalculateQuoteRes(this)"
+												oninput="CalculateQuoteRes(this)">
 											</div>
+	                    </div>
+											<div>
+											<label class="radio">
+											<input type="radio" value="7565" name="radio_res"  onclick="CalculateQuoteRes(this)" onchange="CalculateQuoteRes(this)">
+											<i></i>Standard
+											</label>
+											<label class="radio">
+											<input type="radio" value="12345" name="radio_res" onclick="CalculateQuoteRes(this)" onchange="CalculateQuoteRes(this)">
+											<i></i>Premium
+											</label>
+											<label class="radio">
+											<input type="radio" value="15400" name="radio_res" onclick="CalculateQuoteRes(this)" onchange="CalculateQuoteRes(this)">
+											<i></i>Excelium
+											</label>
+											</div>
+											<div class="row">
+	 									 <div class="col-md-4" "container">
+	 										 <label for="cages">Price per unit</label>
+	 										 <input required type="number" value="" class="form-control" name="residential_container" id="price_unit_res">
+	 									 </div>
+	 									 <div class="col-md-4" "container">
+	 										 <label for="elevators">Number of elevators</label>
+	 										 <input required type="number" value="" class="form-control" name="residential_container" id="number_of_elevators_res">
+	 									 </div>
+	 									 </div>
+	 									 <div class="row">
+	 									 <div class="col-md-4" "container">
+	 										 <label for="material">Material</label>
+	 										 <input required type="number" value="" class="form-control" name="residential_container" id="material_res">
+	 									 </div>
+
+	 									 <div class="col-md-4" "container">
+	 									 	<label for="Installation">Installation</label>
+	 									 	<input required type="number" value="" class="form-control" name="residential_container" id="installation_res">
+	 									 </div>
+	 									 <div class="col-md-4" "container">
+	 									 	<label for="total">Total</label>
+	 									 	<input required type="number" value="" class="form-control" name="residential_container" id="total_res">
+	 									 </div>
+	 									 </div>
 											</div>
 											</div>
 
@@ -254,23 +307,83 @@
 											<div class="row">
 											<div class="col-md-4" "container">
 												<label for="number_apartments">Number of stores</label>
-												<input required type="number" value="" class="form-control" name="stores_comm" id="stores_comm">
-											</div>
+												<input required type="number" value="" class="form-control" name="stores_comm" id="stores_comm"
+												onclick="CalculateQuoteComm(this)"
+												onkeyup="CalculateQuoteComm(this)"
+												onchange="CalculateQuoteComm(this)"
+												oninput="CalculateQuoteComm(this)">
+									</div>
 											<div class="col-md-4" "container">
 												<label for="contact:name">Number of floors</label>
-												<input required type="number" value="" class="form-control" name="floor_comm" id="floor_comm">
+												<input required type="number" value="" class="form-control" name="floor_comm" id="floor_comm"
+												onclick="CalculateQuoteComm(this)"
+												onkeyup="CalculateQuoteComm(this)"
+												onchange="CalculateQuoteComm(this)"
+												oninput="CalculateQuoteComm(this)">
 											</div>
 											<div class="col-md-4" "container">
 												<label for="contact:name">Number of basements</label>
-												<input required type="number" value="" class="form-control" name="basement_res" id="basement_res">
+												<input required type="number" value="" class="form-control" name="basement_res" id="basement_comm"
+												onclick="CalculateQuoteComm(this)"
+												onkeyup="CalculateQuoteComm(this)"
+												onchange="CalculateQuoteComm(this)"
+												oninput="CalculateQuoteComm(this)">
 											</div>
 											<div class="col-md-4" "container">
 												<label for="contact:name">Number of available parking spaces</label>
-												<input required type="number" value="" class="form-control" name="parking_comm" id="parking_comm">
+												<input required type="number" value="" class="form-control" name="parking_comm" id="parking_comm"
+												onclick="CalculateQuoteComm(this)"
+												onkeyup="CalculateQuoteComm(this)"
+												onchange="CalculateQuoteComm(this)"
+												oninput="CalculateQuoteComm(this)">
 											</div>
 											<div class="col-md-4" "container">
 												<label for="contact:name">Number of cages to be built</label>
-												<input required type="number" value="" class="form-control" name="contact[name][required]" id="contact:name">
+												<input required type="number" value="" class="form-control" name="contact[name][required]" id="cages_num"
+												onclick="CalculateQuoteComm(this)"
+												onkeyup="CalculateQuoteComm(this)"
+												onchange="CalculateQuoteComm(this)"
+												oninput="CalculateQuoteComm(this)">
+											</div>
+											</div>
+											<div>
+											<label class="radio">
+											<input type="radio" value="7565" name="radio_comm" onclick="CalculateQuoteComm(this)" onchange="CalculateQuoteComm(this)">
+											<i></i>Standard
+											</label>
+											<label class="radio">
+											<input type="radio" value="12345" name="radio_comm" onclick="CalculateQuoteComm(this)" onchange="CalculateQuoteComm(this)">
+											<i></i>Premium
+											</label>
+											<label class="radio">
+											<input type="radio" value="15400" name="radio_comm" onclick="CalculateQuoteComm(this)" onchange="CalculateQuoteComm(this)">
+											<i></i>Excelium
+											</label>
+											</div>
+											<div class="row">
+											<div class="col-md-4" "container">
+											 <label for="cages">price per unit</label>
+											 <input required type="number" value="" class="form-control" name="commercial_container" id="price_unit_comm">
+											</div>
+											<div class="col-md-4" "container">
+											 <label for="elevators">Number of elevators</label>
+											 <input required type="number" value="" class="form-control" name="commercial_container" id="number_of_elevators">
+											</div>
+											</div>
+											<div class="row">
+											<div class="col-md-4" "container">
+											 <label for="material">Material</label>
+											 <input required type="number" value="" class="form-control" name="commercial_container" id="material_comm">
+											</div>
+
+											<div class="col-md-4" "container">
+											<label for="Installation">Installation</label>
+											<input required type="number" value="" class="form-control" name="commercial_container" id="installation_comm">
+											</div>
+											<div class="col-md-4" "container">
+											<label for="total">Total</label>
+											<input required type="number" value="" class="form-control" name="commercial_container" id="total_comm">
+											</div>
 											</div>
 											</div>
 											</div>
@@ -279,24 +392,89 @@
 											<h1>Corporative</h1>
 											<div class="row">
 											<div class="col-md-4" "container">
-												<label for="contact:name">Number of tenants</label>
-												<input required type="number" value="" class="form-control" name="tenant_corp" id="tenant_corp">
+												<label for="contact:name">Number of entreprises</label>
+												<input required type="number" value="" class="form-control" name="tenant_corp" id="entreprises_corp"
+												onclick="CalculateQuoteCorp(this)"
+												onkeyup="CalculateQuoteCorp(this)"
+												onchange="CalculateQuoteCorp(this)"
+												oninput="CalculateQuoteCorp(this)">
 											</div>
 											<div class="col-md-4" "container">
 												<label for="contact:name">Number of floors</label>
-												<input required type="number" value="" class="form-control" name="floor_corp" id="floor_corp">
+												<input required type="number" value="" class="form-control" name="floor_corp" id="floor_corp"
+												onclick="CalculateQuoteCorp(this)"
+												onkeyup="CalculateQuoteCorp(this)"
+												onchange="CalculateQuoteCorp(this)"
+												oninput="CalculateQuoteCorp(this)">
 											</div>
 											<div class="col-md-4" "container">
 												<label for="contact:name">Number of basements</label>
-												<input required type="number" value="" class="form-control" name="basement_corp" id="basement_corp">
+												<input required type="number" value="" class="form-control" name="basement_corp" id="basement_corp"
+												onclick="CalculateQuoteCorp(this)"
+												onkeyup="CalculateQuoteCorp(this)"
+												onchange="CalculateQuoteCorp(this)"
+												oninput="CalculateQuoteCorp(this)">
 											</div>
 											<div class="col-md-4" "container">
 												<label for="contact:name">Number of available parking spaces</label>
-												<input required type="number" value="" class="form-control" name="parking_corp" id="parking_corp">
+												<input required type="number" value="" class="form-control" name="parking_corp" id="parking_corp"
+												onclick="CalculateQuoteCorp(this)"
+												onkeyup="CalculateQuoteCorp(this)"
+												onchange="CalculateQuoteCorp(this)"
+												oninput="CalculateQuoteCorp(this)">
 											</div>
 											<div class="col-md-4" "container">
-												<label for="contact:name">Number of people by floor</label>
-												<input required type="number" value="" class="form-control" name="floor_corp" id="floor_corp">
+												<label for="contact:name">Maximum occupants by floor</label>
+												<input required type="number" value="" class="form-control" name="floor_corp" id="occupants_max_corp"
+												onclick="CalculateQuoteCorp(this)"
+												onkeyup="CalculateQuoteCorp(this)"
+												onchange="CalculateQuoteCorp(this)"
+												oninput="CalculateQuoteCorp(this)">
+											</div>
+											</div>
+
+											<div>
+											<label class="radio">
+											<input type="radio" value="7565" name="radio_corp" onclick="CalculateQuoteCorp(this)" onchange="CalculateQuoteCorp(this)">
+											<i></i>Standard
+											</label>
+											<label class="radio">
+											<input type="radio" value="12345" name="radio_corp" onclick="CalculateQuoteCorp(this)" onchange="CalculateQuoteCorp(this)">
+											<i></i>Premium
+											</label>
+											<label class="radio">
+											<input type="radio" value="15400" name="radio_corp" onclick="CalculateQuoteCorp(this)" onchange="CalculateQuoteCorp(this)">
+											<i></i>Excelium
+											</label>
+											</div>
+											<div class="row">
+											<div class="col-md-4" "container">
+											 <label for="cages">Price per unit</label>
+											 <input required type="number" value="" class="form-control" name="corporative_container" id="price_unit_corp">
+											</div>
+											<div class="col-md-4" "container">
+											 <label for="elevators">Number of columns</label>
+											 <input required type="number" value="" class="form-control" name="corporative_container" id="number_of_columns">
+											</div>
+											<div class="col-md-4" "container">
+											 <label for="elevators">Number of elevators</label>
+											 <input required type="number" value="" class="form-control" name="corporative_container" id="number_of_elevators_corp">
+											</div>
+											</div>
+											<div class="row">
+											<div class="col-md-4" "container">
+											 <label for="material">Material</label>
+											 <input required type="number" value="" class="form-control" name="corporative_container" id="material_corp">
+											</div>
+
+											<div class="col-md-4" "container">
+											<label for="Installation">Installation</label>
+											<input required type="number" value="" class="form-control" name="corporative_container" id="installation_corp">
+											</div>
+											<div class="col-md-4" "container">
+											<label for="total">Total</label>
+											<input required type="number" value="" class="form-control" name="corporative_container" id="total_corp">
+											</div>
 											</div>
 											</div>
 											</div>
@@ -306,65 +484,104 @@
 											<div class="row">
 											<div class="col-md-4" "container">
 												<label for="contact:name">Number of stores</label>
-												<input required type="number" value="" class="form-control" name="stores_hyb" id="stores_hyb">
+												<input required type="number" value="" class="form-control" name="stores_hyb" id="stores_hyb"
+												onclick="CalculateQuoteHyb(this)"
+												onkeyup="CalculateQuoteHyb(this)"
+												onchange="CalculateQuoteHyb(this)"
+												oninput="CalculateQuoteHyb(this)">
 											</div>
 											<div class="col-md-4" "container">
 												<label for="contact:name">Number of floors</label>
-												<input required type="number" value="" class="form-control" name="floor_hyb" id="floor_hyb">
+												<input required type="number" value="" class="form-control" name="floor_hyb" id="floor_hyb"
+												onclick="CalculateQuoteHyb(this)"
+												onkeyup="CalculateQuoteHyb(this)"
+												onchange="CalculateQuoteHyb(this)"
+												oninput="CalculateQuoteHyb(this)">
 											</div>
 											<div class="col-md-4" "container">
 												<label for="contact:name">Number of basements</label>
-												<input required type="number" value="" class="form-control" name="basement_hyb" id="basement_hyb">
+												<input required type="number" value="" class="form-control" name="basement_hyb" id="basement_hyb"
+												onclick="CalculateQuoteHyb(this)"
+												onkeyup="CalculateQuoteHyb(this)"
+												onchange="CalculateQuoteHyb(this)"
+												oninput="CalculateQuoteHyb(this)">
 											</div>
 											<div class="col-md-4" "container">
 												<label for="contact:name">Number of available parking spaces</label>
-												<input required type="number" value="" class="form-control" name="parking_hyb" id="parking_hyb">
+												<input required type="number" value="" class="form-control" name="parking_hyb" id="parking_hyb"
+												onclick="CalculateQuoteHyb(this)"
+												onkeyup="CalculateQuoteHyb(this)"
+												onchange="CalculateQuoteHyb(this)"
+												oninput="CalculateQuoteHyb(this)">
+											</div>
+											<div class="col-md-4" "container">
+												<label for="contact:name">Maximum occupants by floor</label>
+												<input required type="number" value="" class="form-control" name="floor_corp" id="occupants_max_hyb"
+												onclick="CalculateQuoteHyb(this)"
+												onkeyup="CalculateQuoteHyb(this)"
+												onchange="CalculateQuoteHyb(this)"
+												oninput="CalculateQuoteHyb(this)">
 											</div>
 											<div class="col-md-4" "container">
 												<label for="number_activity">Number of activity hours of the building</label>
-												<input required type="number" value="" class="form-control" name="activity_hyb" id="activity_hyb">
+												<input required type="number" value="" class="form-control" name="activity_hyb" id="activity_hyb"
+												onclick="CalculateQuoteHyb(this)"
+												onkeyup="CalculateQuoteHyb(this)"
+												onchange="CalculateQuoteHyb(this)"
+												oninput="CalculateQuoteHyb(this)">
 											</div>
 											</div>
+
+										 <div>
+										 <label class="radio">
+										 <input type="radio" value="7565" name="radio_hyb" onclick="CalculateQuoteHyb(this)" onchange="CalculateQuoteHyb(this)">
+										 <i></i>Standard
+										 </label>
+										 <label class="radio">
+										 <input type="radio" value="12345" name="radio_hyb" onclick="CalculateQuoteHyb(this)" onchange="CalculateQuoteHyb(this)">
+										 <i></i>Premium
+										 </label>
+										 <label class="radio">
+										 <input type="radio" value="15400" name="radio_hyb" onclick="CalculateQuoteHyb(this)" onchange="CalculateQuoteHyb(this.value)">
+										 <i></i>Excelium
+										 </label>
+										 </div>
+										 <div class="row">
+										 <div class="col-md-4" "container">
+										  <label for="cages">Price per unit</label>
+										  <input required type="number" value="" class="form-control" name="residential_container" id="price_unit_hyb">
+										 </div>
+										 <div class="col-md-4" "container">
+											<label for="elevators">Number of columns</label>
+											<input required type="number" value="" class="form-control" name="corporative_container" id="number_of_columns_hyb">
+										 </div>
+										 <div class="col-md-4" "container">
+										  <label for="elevators">Number of elevators</label>
+										  <input required type="number" value="" class="form-control" name="residential_container" id="number_of_elevators_hyb">
+										 </div>
+										 </div>
+										 <div class="row">
+										 <div class="col-md-4" "container">
+										  <label for="material">Material</label>
+										  <input required type="number" value="" class="form-control" name="hybrid_container" id="material_hyb">
+										 </div>
+										 <div class="col-md-4" "container">
+										 <label for="Installation">Installation</label>
+										 <input required type="number" value="" class="form-control" name="hybrid_container" id="installation_hyb">
+										 </div>
+										 <div class="col-md-4" "container">
+										 <label for="total">Total</label>
+										 <input required type="number" value="" class="form-control" name="hybrid_container" id="total_hyb">
+										 </div>
+										 </div>
+										 </div>
 										 </div>
 
-                       <label class="radio">
-                       <input type="radio" value="7565" name="radio_res" checked="checked" onchange="CalculateQuoteRes(this.value)">
-                       <i></i>Standard
-                   </label>
-                   <label class="radio">
-                       <input type="radio" value="12345" name="radio_res" onchange="CalculateQuoteRes(this.value)">
-                       <i></i>Premium
-                   </label>
-                   <label class="radio">
-                       <input type="radio" value="15400" name="radio_res" onchange="CalculateQuoteRes(this.value)">
-                       <i></i>Excelium
-                   </label>
 
-									 <div class="row">
-									 <div class="col-md-4" "container">
-										 <label for="cages">Number of cages</label>
-										 <input required type="number" value="" class="form-control" name="residential_container" id="number_of_cages">
-									 </div>
-									 <div class="col-md-4" "container">
-										 <label for="elevators">Number of elevators</label>
-										 <input required type="number" value="" class="form-control" name="residential_container" id="residential_container">
-									 </div>
-									 </div>
-									 <div class="row">
-									 <div class="col-md-4" "container">
-										 <label for="material">Material</label>
-										 <input required type="number" value="" class="form-control" name="residential_container" id="residential_container">
-									 </div>
 
-									 <div class="col-md-4" "container">
-									 	<label for="Installation">Installation</label>
-									 	<input required type="number" value="" class="form-control" name="residential_container" id="residential_container">
-									 </div>
-									 <div class="col-md-4" "container">
-									 	<label for="total">Total</label>
-									 	<input required type="number" value="" class="form-control" name="residential_container" id="residential_container">
-									 </div>
-									 </div>
+
+
+
 							<!-- custom file upload -->
 
 

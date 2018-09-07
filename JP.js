@@ -76,3 +76,15 @@ function calculateRes(val)
                 lift=Math.ceil((res1/res2)/6)*coef;
     document.formres.lift_res.value=lift+" elevators proposed";
 }
+
+
+
+function CalculateQuoteRes(val)
+{
+
+  document.getElementById("number_of_cages_res").value = calculateNumberOfCages(val);
+  document.getElementById("number_of_elevators_res").value = calculateNumberOfElevators(val);
+  document.getElementById("material_res").value = calculateMaterial();
+  document.getElementById("installation_res").value = calculateInstallation();
+  document.getElementById("total_res").value = calculateTotal();
+}
